@@ -3,7 +3,9 @@
 const { isValidXML } = require("../src");
 
 describe("advanced validator test", () => {
-  it("FILL ME", () => {
-    // FILL ME
+  describe("given valid xml", () => {
+    it("<a><b><b></a>", () => {
+      expect(isValidXML("<a><b><b></a>")).toBeFalsy();
+    });
   });
 });
